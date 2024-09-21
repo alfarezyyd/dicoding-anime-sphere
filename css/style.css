@@ -16,17 +16,39 @@ body {
     flex-direction: column;
 }
 
-header.navbar-container {
+body.light-mode {
+    background-color: #FFE3E1;
+    color: #333333;
+}
+
+body.dark-mode {
+    background-color: #145374;
+    color: #E8E8E8;
+    border-color: #e5e5cb;
+}
+
+header {
     width: 100%;
+}
+
+header.light-mode {
+    background-color: #FF9494;
+}
+
+header.dark-mode {
+    background-color: #00334E;
+}
+
+header.navbar-container {
     max-width: 1200px;
     padding-block: 1rem;
     margin-inline: auto;
-
     display: flex;
     justify-content: space-around;
     align-items: center;
-
     z-index: 9999;
+    margin-top: 20px;
+    border-radius: 20px;
 }
 
 header.navbar-container .logo {
@@ -41,6 +63,7 @@ header.navbar-container .logo img {
 header.navbar-container .logo h3 {
     font-family: 'Playwrite CU', 'Nunito', sans-serif;
     line-height: 30px;
+    color: #FFFFFF;
 }
 
 header.navbar-container .nav-list ul {
@@ -57,11 +80,10 @@ header.navbar-container .nav-list li {
 header.navbar-container .nav-list li a {
     padding: 0.5rem 1.5rem;
     border-radius: 999px;
-
     text-decoration: none;
     font-size: 1.05rem;
     font-weight: 500;
-    color: black;
+    color: #ffffff;
     transition: all 0.2s ease-in-out;
 }
 
@@ -120,17 +142,61 @@ main aside .social-media li a:hover {
     display: flex;
     flex-wrap: wrap; /* Membuat item turun ke baris baru jika ruang tidak cukup */
     gap: 1rem;
-    width: 80%;
+    justify-content: center;
 }
+
+.sidebar {
+    width: 10%;
+    position: sticky;
+    top: 0; /* Sticky dari bagian atas */
+    display: flex;
+    flex-direction: column; /* Elemen diatur secara vertikal */
+    gap: 1rem; /* Jarak antar-elemen */
+}
+
+.sidebar .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.sidebar .card ul li {
+    display: flex;
+    align-items: center; /* Mengatur gambar dan teks secara vertikal */
+    gap: 10px; /* Jarak antara gambar dan teks */
+    margin-bottom: 1rem;
+
+}
+
+.sidebar .card ul li img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover; /* Gambar tetap proporsional */
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+
+}
+
+
+.sidebar .card ul li p {
+    margin: 0;
+    font-size: 1rem;
+}
+
 
 .anime-article {
     display: flex;
-    flex-basis: calc(40% - 1rem); /* Membagi setiap artikel menjadi sepertiga dari container */
+    flex-basis: calc(30% - 1rem); /* Membagi setiap artikel menjadi sepertiga dari container */
     gap: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     padding: 10px;
     position: relative;
+    background-color: #FFD1D1;
+}
+
+.anime-article.dark-mode {
+    background-color: #5588A3;
 }
 
 .anime-article img {
@@ -162,7 +228,6 @@ main aside .social-media li a:hover {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    color: white;
 }
 
 .anime-badge p {
@@ -173,10 +238,12 @@ main aside .social-media li a:hover {
 
 .badge-ranking {
     background-color: #F4C430;
+    color: white !important;
 }
 
 .badge-studio {
     background-color: #00E497;
+    color: white !important;
 }
 
 
@@ -220,6 +287,15 @@ main aside .social-media li a:hover {
     position: relative;
     height: 100%; /* Membuat wrapper mengikuti tinggi gambar */
     overflow: hidden; /* Memastikan tidak ada elemen yang keluar dari wrapper */
+}
+
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+.border-0 {
+    border-width: 0;
 }
 
 
