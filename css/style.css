@@ -93,24 +93,19 @@ header.navbar-container .nav-list li:hover a {
 main {
     padding: 2rem 4rem;
     display: flex;
-    align-items: center;
 }
 
 main aside {
-    position: fixed;
+    position: relative;
     inset-block: 0;
-    inset-inline-end: 0;
+    right: 65px;
 }
 
-main aside .social-media {
-    height: 100%;
-    display: flex;
-}
 
-main aside .social-media ul {
+main aside .rank ul {
     padding: 1.5rem 1rem;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
     margin: auto;
     background-color: #2d3e50;
     display: flex;
@@ -120,11 +115,11 @@ main aside .social-media ul {
     gap: 1.5rem;
 }
 
-main aside .social-media li {
+main aside .rank li {
     list-style-type: none;
 }
 
-main aside .social-media li a {
+main aside .rank li a {
     text-decoration: none;
     font-size: 1.5rem;
     color: white;
@@ -132,7 +127,7 @@ main aside .social-media li a {
     transition: all 0.1s ease-in-out;
 }
 
-main aside .social-media li a:hover {
+main aside .rank li a:hover {
     color: #89b0d9;
 }
 
@@ -309,7 +304,7 @@ footer.dark-mode {
 }
 
 
-.profile{
+.profile {
     display: flex;
     width: 40%;
 }
@@ -319,12 +314,14 @@ footer.dark-mode {
     margin: 15px;
     border-radius: 50%;
 }
+
 .profile-information {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0.5rem;
 }
+
 .profile-information p {
     color: white;
     font-weight: bold;
@@ -357,6 +354,60 @@ footer ul li a {
 footer ul li a:hover {
     box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
 }
+
+.anime-widget {
+    display: none; /* Sembunyikan widget secara default */
+    position: absolute; /* Pastikan posisi diatur */
+    top: 0; /* Atur posisi sesuai kebutuhan */
+    left: 110%; /* Atur agar tetap di sebelah kanan */
+    background-color: #FF9494; /* Sesuaikan dengan warna */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease; /* Transisi halus untuk opacity */
+    z-index: 10; /* Pastikan widget di atas elemen lainnya */
+    width: 350px;
+}
+
+.anime-widget h4 {
+    margin-bottom: 10px; /* Jarak bawah untuk judul */
+    font-size: 1.3rem; /* Ukuran font untuk judul */
+}
+
+.anime-widget ol {
+    padding-left: 0; /* Hilangkan padding kiri pada list */
+    list-style-type: none; /* Hilangkan bullet */
+}
+
+.anime-widget li {
+    display: flex; /* Gunakan flex untuk tata letak item */
+    align-items: center; /* Rata tengah secara vertikal */
+    margin-bottom: 10px; /* Jarak antara item */
+}
+
+.anime-widget img {
+    width: 70px; /* Atur lebar gambar */
+    height: auto; /* Biarkan tinggi otomatis untuk menjaga aspek rasio */
+    margin-right: 10px; /* Jarak kanan untuk gambar */
+    border-radius: 3px; /* Sudut yang sedikit membulat untuk gambar */
+}
+
+.anime-recommendation-information {
+    margin: 0;
+    display: flex; /* Gunakan flex untuk informasi anime */
+    flex-direction: column; /* Tata letak vertikal */
+}
+
+.anime-recommendation-information h5 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.anime-recommendation-information p {
+    margin: 0;
+}
+
+
 
 
 /* Responsiveness untuk tampilan di perangkat lebih kecil */
