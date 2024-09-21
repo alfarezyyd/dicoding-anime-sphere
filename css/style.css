@@ -8,8 +8,7 @@
 
 body {
     font-family: 'Nunito', sans-serif;
-    height: 100vh;
-    margin: 0 0 35rem;
+    margin: 0 0 0.5rem;
     display: flex;
     flex-direction: column;
 }
@@ -186,6 +185,7 @@ main aside .rank li a:hover {
     padding: 10px;
     position: relative;
     background-color: #FFD1D1;
+    overflow: scroll;
 }
 
 .anime-article.dark-mode {
@@ -375,7 +375,7 @@ footer ul li a:hover {
     color: white;
 }
 
-.anime-widget.dark-mode{
+.anime-widget.dark-mode {
     background-color: #00334E;
 }
 
@@ -449,8 +449,22 @@ footer ul li a:hover {
         padding: 15px; /* Tambah padding untuk tampilan yang lebih baik */
     }
 
+
+    main {
+        padding: 1rem 2rem;
+        display: flex;
+    }
+
+
+    main aside {
+        position: relative;
+        inset-block: 0;
+        right: 35px;
+    }
+
+
     header.navbar-container {
-        max-width: 700px;
+        max-width: 450px;
     }
 
     footer {
@@ -469,22 +483,19 @@ footer ul li a:hover {
         flex-basis: 100%; /* Menampilkan 1 artikel per baris di layar lebih kecil */
     }
 
-    body {
-        margin: 0 0 143rem;
-    }
 
     .anime-widget {
         display: none; /* Sembunyikan widget secara default */
         position: absolute; /* Pastikan posisi diatur */
         top: 30%; /* Atur posisi sesuai kebutuhan */
-        left: 5%; /* Atur agar tetap di sebelah kanan */
+        left: 10%; /* Atur agar tetap di sebelah kanan */
         background-color: #FF9494; /* Sesuaikan dengan warna */
         padding: 10px;
         border-radius: 5px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         transition: opacity 0.3s ease; /* Transisi halus untuk opacity */
         z-index: 10; /* Pastikan widget di atas elemen lainnya */
-        width: 350px;
+        width: 300px;
     }
 
     main {
@@ -528,6 +539,7 @@ footer ul li a:hover {
     }
 
     footer {
+        position: static;
         width: 95%;
     }
 
