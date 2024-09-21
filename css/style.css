@@ -38,7 +38,7 @@ header.dark-mode {
 }
 
 header.navbar-container {
-    max-width: 1200px;
+    max-width: 600px;
     padding-block: 1rem;
     margin-inline: auto;
     display: flex;
@@ -460,16 +460,59 @@ footer ul li a:hover {
 
 @media (max-width: 768px) {
     .anime-article {
+        width: 100%;
         flex-basis: 100%; /* Menampilkan 1 artikel per baris di layar lebih kecil */
+    }
+
+    body {
+        margin: 0 0 143rem;
+    }
+
+    .anime-widget {
+        display: none; /* Sembunyikan widget secara default */
+        position: absolute; /* Pastikan posisi diatur */
+        top: 30%; /* Atur posisi sesuai kebutuhan */
+        left: 5%; /* Atur agar tetap di sebelah kanan */
+        background-color: #FF9494; /* Sesuaikan dengan warna */
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: opacity 0.3s ease; /* Transisi halus untuk opacity */
+        z-index: 10; /* Pastikan widget di atas elemen lainnya */
+        width: 350px;
+    }
+
+    main {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main aside {
+        display: block; /* Tetap mempertahankan block-level */
+        position: static; /* Ubah dari absolute menjadi static */
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5%;
+    }
+
+    main aside .rank ul {
+        padding: 1.5rem 1rem;
+        border-radius: 12px;
+        margin: auto;
+        background-color: #2d3e50;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
     }
 
     header.navbar-container {
         max-width: 300px;
     }
 
-    footer {
-        width: 90%;
-    }
 
     .profile-information p {
         color: white;
@@ -478,6 +521,40 @@ footer ul li a:hover {
         text-align: center;
         margin: 0;
     }
+
+    footer {
+        width: 95%;
+    }
+
+    .profile img {
+        margin: 15px;
+        border-radius: 50%;
+    }
+
+    .profile-information p {
+        color: white;
+        font-weight: bold;
+        font-size: 0.8rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    .profile img {
+        width: 50%;
+        border-radius: 50%;
+    }
+
+    footer ul {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 12px;
+        margin: 10px auto 10px;
+        text-align: center;
+        padding: 0;
+    }
+
 
 }
 
