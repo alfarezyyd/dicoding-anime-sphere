@@ -12,7 +12,6 @@ darkModeTrigger.addEventListener("click", () => {
   navbarSelector.classList.remove(localStorage.getItem("colorMode"));
   navbarSelector.classList.add(colorMode);
   footerSelector.classList.remove(localStorage.getItem("colorMode"));
-  footerSelector.classList.add(colorMode);
   allAnimeArticle.forEach((article) => {
     article.classList.remove(localStorage.getItem("colorMode"));
     article.classList.add(colorMode)
