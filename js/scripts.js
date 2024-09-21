@@ -1,6 +1,7 @@
 const darkModeTrigger = document.getElementById("darkModeTrigger");
 const imageTheme = darkModeTrigger.querySelector("img");
 const navbarSelector = document.querySelector(".navbar-container");
+const footerSelector = document.querySelector("footer");
 const allAnimeArticle = document.querySelectorAll(".anime-article");
 localStorage.setItem("colorMode", "light-mode")
 darkModeTrigger.addEventListener("click", () => {
@@ -10,12 +11,14 @@ darkModeTrigger.addEventListener("click", () => {
   document.body.className = colorMode;
   navbarSelector.classList.remove(localStorage.getItem("colorMode"));
   navbarSelector.classList.add(colorMode);
+  footerSelector.classList.remove(localStorage.getItem("colorMode"));
+  footerSelector.classList.add(colorMode);
   allAnimeArticle.forEach((article) => {
     article.classList.remove(localStorage.getItem("colorMode"));
     article.classList.add(colorMode)
   })
-  localStorage.setItem("colorMode", colorMode);
-
   imageTheme.src =
     colorMode === "dark-mode" ? "./icon/sun.svg" : "./icon/moon.svg";
+  console.log(colorMode)
+  localStorage.setItem("colorMode", colorMode);
 });
