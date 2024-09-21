@@ -1,173 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+CU:wght@100..400&display=swap');
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+    font-family: 'Nunito', sans-serif;
 
-  height: 100vh;
-  margin: 0;
+    height: 100vh;
+    margin: 0;
 
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 header.navbar-container {
-  width: 100%;
-  max-width: 1200px;
-  padding-block: 1rem;
-  margin-inline: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding-block: 1rem;
+    margin-inline: auto;
 
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-  z-index: 9999;
+    z-index: 9999;
+}
+
+header.navbar-container .logo {
+    display: flex;
+    gap: 10px;
 }
 
 header.navbar-container .logo img {
-  width: 150px;
+    width: 60px;
+}
+
+header.navbar-container .logo h3 {
+    font-family: 'Playwrite CU', 'Nunito', sans-serif;
+    line-height: 30px;
 }
 
 header.navbar-container .nav-list ul {
-  padding-left: 0;
-
-  display: flex;
-  justify-content: center;
-  gap: 2rem 1rem;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
 }
 
 header.navbar-container .nav-list li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 header.navbar-container .nav-list li a {
-  padding: 0.5rem 1.5rem;
-  border-radius: 999px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
 
-  text-decoration: none;
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: black;
-
-  transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+    transition: all 0.2s ease-in-out;
 }
 
 header.navbar-container .nav-list li:hover a {
-  background-color: #425c77;
-  color: white;
+    background-color: #425c77;
+    color: white;
 }
 
 main {
-  flex: 1;
-
-  width: 100%;
-  max-width: 1200px;
-  margin-inline: auto;
-  padding: 2rem 4rem;
-
-  display: flex;
-  align-items: center;
-}
-
-main .content {
-  flex: 1;
-
-  display: flex;
-  align-items: center;
-}
-
-main .content .content-description {
-  flex: 1 1;
-}
-
-main .content .content-description .title {
-  margin-block: 1rem;
-
-  font-size: 3.5rem;
-}
-
-main .content .content-description p {
-  font-size: 1.2rem;
-  line-height: 1.7rem;
-}
-
-main .content .content-description button {
-  padding: 0.8rem 2.5rem;
-  border: 3px solid transparent;
-  border-radius: 999px;
-  margin-block-start: 1rem;
-
-  background-color: #2d3e50;
-
-  font-family: 'Quicksand', sans-serif;
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 700;
-  color: white;
-
-  cursor: pointer;
-  transition: all 0.15s ease-in;
-}
-
-main .content .content-description button:hover {
-  border: 3px solid #2d3e50;
-  background-color: transparent;
-
-  color: #2d3e50;
-}
-
-main .content .content-image {
-  flex: 1;
-
-  display: flex;
-}
-
-main .content .content-image img {
-  width: 300px;
-  min-width: 250px;
-  margin: auto;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
 }
 
 main aside {
-  position: fixed;
-  inset-block: 0;
-  inset-inline-end: 0;
+    position: fixed;
+    inset-block: 0;
+    inset-inline-end: 0;
 }
 
 main aside .social-media {
-  height: 100%;
-  display: flex;
+    height: 100%;
+    display: flex;
 }
 
 main aside .social-media ul {
-  padding: 1.5rem 1rem;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-  margin: auto;
-  background-color: #2d3e50;
-
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin: auto;
+    background-color: #2d3e50;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 main aside .social-media li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 main aside .social-media li a {
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
 
-  transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 main aside .social-media li a:hover {
-  color: #89b0d9;
+    color: #89b0d9;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Membuat item turun ke baris baru jika ruang tidak cukup */
+    gap: 1rem;
+    width: 80%;
+}
+
+.anime-article {
+    display: flex;
+    flex-basis: calc(40% - 1rem); /* Membagi setiap artikel menjadi sepertiga dari container */
+    gap: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+}
+
+.anime-article img {
+    width: 100%;
+    height: 100%; /* Pastikan gambar mengisi penuh wrapper */
+    object-fit: cover; /* Menghindari gambar terdistorsi */
+    border-radius: 10px;
+    display: block;
+}
+
+.anime-article .anime-information {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.anime-article .anime-information h4 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.anime-article .anime-information p {
+    max-width: 100%;
+    padding: 0.3rem;
+}
+
+.anime-badge {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.anime-badge p {
+    margin: 0;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.badge-ranking {
+    background-color: #F4C430;
+}
+
+.badge-studio {
+    background-color: #00E497;
+}
+
+
+.image-wrapper {
+    position: relative;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;;
+    background-color: rgba(0, 0, 0, 0.6); /* Warna overlay semi-transparan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Tidak terlihat secara default */
+    transition: opacity 0.3s ease; /* Transisi halus untuk efek hover */
+    pointer-events: none; /* Supaya overlay tidak menangkap klik sebelum hover */
+}
+
+.overlay-button {
+    background-color: white;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Tampilkan overlay saat gambar di-hover */
+.image-wrapper:hover .overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.image-wrapper {
+    position: relative;
+    height: 100%; /* Membuat wrapper mengikuti tinggi gambar */
+    overflow: hidden; /* Memastikan tidak ada elemen yang keluar dari wrapper */
+}
+
+
+/* Responsiveness untuk tampilan di perangkat lebih kecil */
+@media (max-width: 1024px) {
+    .anime-article {
+        flex-basis: calc(50% - 1rem); /* Menampilkan 2 artikel per baris di layar yang lebih kecil */
+    }
+}
+
+@media (max-width: 768px) {
+    .anime-article {
+        flex-basis: 100%; /* Menampilkan 1 artikel per baris di layar lebih kecil */
+    }
 }
