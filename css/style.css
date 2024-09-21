@@ -408,6 +408,29 @@ footer ul li a:hover {
 }
 
 
+@media (max-width: 1400px) {
+    .anime-article {
+        flex-basis: calc(50% - 1rem); /* Menampilkan 2 artikel per baris di layar yang lebih kecil */
+    }
+
+    .anime-widget {
+        width: 300px; /* Kurangi lebar widget untuk layar lebih kecil */
+        padding: 15px; /* Tambah padding untuk tampilan yang lebih baik */
+    }
+
+    header.navbar-container {
+        max-width: 700px;
+    }
+
+    footer {
+        width: 80%;
+    }
+
+    .profile {
+        display: flex;
+        width: 60%;
+    }
+}
 
 
 /* Responsiveness untuk tampilan di perangkat lebih kecil */
@@ -415,10 +438,50 @@ footer ul li a:hover {
     .anime-article {
         flex-basis: calc(50% - 1rem); /* Menampilkan 2 artikel per baris di layar yang lebih kecil */
     }
+
+    .anime-widget {
+        width: 300px; /* Kurangi lebar widget untuk layar lebih kecil */
+        padding: 15px; /* Tambah padding untuk tampilan yang lebih baik */
+    }
+
+    header.navbar-container {
+        max-width: 700px;
+    }
+
+    footer {
+        width: 80%;
+    }
+
+    .profile {
+        display: flex;
+        width: 60%;
+    }
 }
 
 @media (max-width: 768px) {
     .anime-article {
         flex-basis: 100%; /* Menampilkan 1 artikel per baris di layar lebih kecil */
     }
+
+    header.navbar-container {
+        max-width: 300px;
+    }
+
+    footer {
+        width: 90%;
+    }
+
+    .profile-information p {
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
+        text-align: center;
+        margin: 0;
+    }
+
+}
+
+/* Tambahan untuk widget agar lebih responsif pada perangkat mobile */
+.anime-widget {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Tambah shadow lebih halus */
 }
