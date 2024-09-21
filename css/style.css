@@ -372,6 +372,11 @@ footer ul li a:hover {
 .anime-widget h4 {
     margin-bottom: 10px; /* Jarak bawah untuk judul */
     font-size: 1.3rem; /* Ukuran font untuk judul */
+    color: white;
+}
+
+.anime-widget.dark-mode{
+    background-color: #00334E;
 }
 
 .anime-widget ol {

@@ -2,6 +2,7 @@ const darkModeTrigger = document.getElementById("darkModeTrigger");
 const imageTheme = darkModeTrigger.querySelector("img");
 const navbarSelector = document.querySelector(".navbar-container");
 const footerSelector = document.querySelector("footer");
+const animeWidgetSelector = document.querySelectorAll(".anime-widget");
 const allAnimeArticle = document.querySelectorAll(".anime-article");
 localStorage.setItem("colorMode", "light-mode")
 darkModeTrigger.addEventListener("click", () => {
@@ -13,6 +14,11 @@ darkModeTrigger.addEventListener("click", () => {
     navbarSelector.classList.add(colorMode);
     footerSelector.classList.remove(localStorage.getItem("colorMode"));
     footerSelector.classList.add(colorMode);
+    animeWidgetSelector.forEach(function (element) {
+        element.classList.remove(localStorage.getItem("colorMode"));
+        element.classList.add(colorMode);
+    })
+
     allAnimeArticle.forEach((article) => {
         article.classList.remove(localStorage.getItem("colorMode"));
         article.classList.add(colorMode)
